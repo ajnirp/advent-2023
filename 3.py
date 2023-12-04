@@ -80,7 +80,7 @@ def process2(grid):
 				gears_for_buffer.extend(get_all_nbr_gears(grid, r, c))
 				include_num = True
 	gear_to_nums = get_gear_to_nums(num_to_gears)
-	return sum(nums[0] * nums[1] for gear, nums in gear_to_nums.items() if len(nums) == 2)
+	return sum(nums[0] * nums[1] for nums in gear_to_nums.values() if len(nums) == 2)
 
 print(process(data)) # 559667
 print(process2(data)) # 86841457
